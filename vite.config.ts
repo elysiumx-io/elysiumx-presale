@@ -7,6 +7,11 @@ export default defineConfig({
     outDir: 'dist',
   },
   plugins: [react()],
+  server: {
+    host: '0.0.0.0',
+    port: 8000,
+    allowedHosts: ['*'],
+  },
   define: {
     'global': 'window',
   },
