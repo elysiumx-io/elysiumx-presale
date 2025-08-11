@@ -1,0 +1,192 @@
+.navbar {
+    z-index: 999999;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    background: transparent;
+    width: 90%;
+    max-width: 1200px;
+}
+
+ .navbar .logo {
+     display: flex;
+     align-items: center;
+ }
+
+ .navbar .logo img {
+     height: 40px;
+     margin-right: 10px;
+ }
+
+ .navbar .logo span {
+     font-size: 26px;
+     color: #fffdfd;
+     font-weight: bold;
+ }
+
+ .navbar .menu {
+     display: flex;
+     align-items: center;
+     background: #181c25;
+     border: rgba(255, 255, 255, .06) 1px solid;
+     padding: 15px 40px;
+     border-radius: 27px;
+ }
+
+ .navbar .menu a {
+     position: relative;
+     color: #fff;
+     text-decoration: none;
+     margin: 0 20px;
+     transition: color 0.3s ease, text-shadow 0.3s ease;
+     display: inline-flex;
+     align-items: center;
+     gap: 5px;
+ }
+
+ .navbar .menu>a:hover {
+     color: #5f5c5c;
+     text-shadow: 1px -1px 13px rgba(10, 101, 192, 0.44);
+ }
+
+ .pin-icon {
+     color: #41F182;
+     width: 16px;
+     height: 16px;
+     transform: rotate(45deg);
+ }
+
+ .navbar .actions {
+     display: flex;
+     align-items: center;
+ }
+
+ .navbar .actions .btn {
+     margin-left: 10px;
+     padding: 15px 20px;
+     border: none;
+     border-radius: 20px;
+     cursor: pointer;
+ }
+
+ .navbar .actions .btn.buy-dao {
+     background: #181c25;
+     border: rgba(255, 255, 255, .06) 1px solid;
+     color: #fff;
+ }
+
+ .navbar .actions .btn.connect-wallet {
+     background: #41F182;
+     color: #000;
+ }
+
+ .hamburger {
+     color: #fff;
+     display: none;
+     cursor: pointer;
+     font-size: 24px;
+ }
+
+ .dropdown {
+     position: relative;
+     display: inline-block;
+ }
+
+ .dropdown-content {
+     padding: 10px 0px;
+     display: none;
+     position: absolute;
+     background-color: #14161D;
+     min-width: 160px;
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+     z-index: 1;
+     border-radius: 10px;
+     overflow: hidden;
+ }
+
+ .dropdown-content a {
+     color: black;
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+ }
+
+ .dropdown-content a:hover {
+     background-color: #25272E;
+     border-radius: 12px;
+ }
+
+ .dropdown:hover .dropdown-content {
+     display: block;
+ }
+
+ @media (max-width: 768px) {
+     .navbar {
+         flex-wrap: wrap;
+        
+     }
+
+     .navbar .menu {
+         display: none;
+         width: 100%;
+         flex-direction: column;
+         align-items: flex-start;
+         margin-top: 10px;
+         padding: 15px 20px;
+     }
+
+     .navbar .menu.active {
+         display: flex;
+     }
+
+     .navbar .menu a {
+         margin: 10px 0;
+     }
+
+     .navbar .actions {
+         display: none;
+         width: 100%;
+         flex-direction: column;
+         align-items: flex-start;
+         margin-top: 10px;
+     }
+
+     .navbar .actions.active {
+         display: flex;
+     }
+
+     .navbar .actions .btn {
+         margin: 10px 0;
+         width: 100%;
+     }
+
+     .hamburger {
+         display: block;
+     }
+
+     .dropdown-content {
+         position: static;
+         display: none;
+         background-color: transparent;
+         box-shadow: none;
+     }
+
+     .dropdown:hover .dropdown-content {
+         display: block;
+     }
+
+     .dropdown-content a:hover {
+         color: #000;
+         background-color: #41F182;
+         border-radius: 12px;
+     }
+
+     .navbar .menu .dropdown {
+         margin: 10px 0;
+     }
+ }

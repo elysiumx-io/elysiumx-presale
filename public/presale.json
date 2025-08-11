@@ -1,0 +1,38 @@
+{
+  "countdown": {
+    "endDate": "2025-12-31T23:59:59Z"
+  },
+  "progressBar": {
+    "currentStage": 1,
+    "stages": [
+      { "name": "Stage 1", "target": 100000, "raised": 50000 },
+      { "name": "Stage 2", "target": 200000, "raised": 0 },
+      { "name": "Stage 3", "target": 300000, "raised": 0 },
+      { "name": "Stage 4", "target": 400000, "raised": 0 },
+      { "name": "Stage 5", "target": 500000, "raised": 0 }
+    ]
+  },
+  "investmentOptions": [
+    {
+      "id": 1,
+      "name": "Tier 1",
+      "price": 0.1,
+      "allocation": 1000,
+      "currency": "SOL"
+    },
+    {
+      "id": 2,
+      "name": "Tier 2",
+      "price": 0.2,
+      "allocation": 2000,
+      "currency": "SOL"
+    },
+    {
+      "id": 3,
+      "name": "Tier 3",
+      "price": 0.5,
+      "allocation": 5000,
+      "currency": "SOL"
+    }
+  ]
+}

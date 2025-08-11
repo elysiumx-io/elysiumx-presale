@@ -1,0 +1,104 @@
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  /* overflow: hidden; REMOVED to allow scrolling on mobile */
+}
+
+.backgroundWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Use min-height here as well */
+  padding: 2rem 1rem; /* Increased vertical padding for mobile */
+  color: #fff;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem; /* Adjusted margin */
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  text-align: center;
+  color: #cbd5e1; /* slate-300 */
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.cardsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Makes cards equal height */
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 2rem;
+  text-align: left;
+}
+
+.cardTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  color: #94a3b8;
+}
+
+.selectButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.selectButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .cardsWrapper {
+    flex-direction: column;
+    max-width: 400px;
+  }
+  .title {
+    font-size: 1.875rem;
+  }
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+}
