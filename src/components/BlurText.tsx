@@ -1,4 +1,4 @@
-import { FC, memo, ReactNode } from "react";
+import { FC, memo } from "react";
 import { motion, Variants } from "framer-motion";
 
 interface BlurTextProps {

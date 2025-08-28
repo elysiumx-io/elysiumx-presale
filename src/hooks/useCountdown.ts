@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getPresaleData } from "../firebase/presaleService";
+import { getPresaleData } from "../services/backendService";
 
 const useCountdown = () => {
   const [timeLeft, setTimeLeft] = useState({

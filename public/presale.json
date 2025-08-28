@@ -1,4 +1,5 @@
 {
+  "backend_host": "http://localhost:8001",
   "countdown": {
     "endDate": "2025-12-31T23:59:59Z"
   },
@@ -12,27 +13,53 @@
       { "name": "Stage 5", "target": 500000, "raised": 0 }
     ]
   },
+  "presalePoolAddress": {
+    "evm": "",
+    "solana": ""
+  },
+  "paymentOptions": {
+    "usdt": {
+      "contractSolana": "",
+      "contractEvmETH": "",
+      "contractEvmAvax": "",
+      "contractEvmBsc": "",
+      "contractEvmFtm": "",
+      "contractEvmBase": "",
+      "contractEvmScroll": "",
+      "contractEvmOptimism": "",
+      "contractEvmArb": ""
+    },
+    "usdc": {
+      "contractSolana": "",
+      "contractEvmETH": "",
+      "contractEvmAvax": "",
+      "contractEvmBsc": "",
+      "contractEvmFtm": "",
+      "contractEvmBase": "",
+      "contractEvmScroll": "",
+      "contractEvmOptimism": "",
+      "contractEvmArb": ""
+    }
+  },
   "investmentOptions": [
     {
       "id": 1,
       "name": "Tier 1",
       "price": 0.1,
-      "allocation": 1000,
-      "currency": "SOL"
+      "allocation": 1000
     },
     {
       "id": 2,
       "name": "Tier 2",
       "price": 0.2,
-      "allocation": 2000,
-      "currency": "SOL"
+      "allocation": 2000
     },
     {
       "id": 3,
       "name": "Tier 3",
       "price": 0.5,
-      "allocation": 5000,
-      "currency": "SOL"
+      "allocation": 5000
     }
-  ]
+  ],
+  "depositLogs": []
 }

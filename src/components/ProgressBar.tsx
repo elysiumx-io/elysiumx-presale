@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type React from "react";
-import { getPresaleData } from "../firebase/presaleService";
+import { getPresaleData } from "../services/backendService";
 import styles from "./ProgressBar.module.css";
 
 interface Stage {

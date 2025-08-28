@@ -46,7 +46,12 @@ const App: React.FC = () => {
             <Countdown />
             <ProgressBar currentStage={currentStage} setCurrentStage={setCurrentStage} />
             <InvestmentOptions key={purchaseCount} />
-            <ActionButtons currentStage={currentStage} onPurchase={handlePurchase} />
+            <ActionButtons 
+              currentStage={currentStage} 
+              onPurchase={handlePurchase}
+              isConnected={isConnected}
+              connect={connect}
+            />
           </SpotlightCard>
         </FadeContent>
       </div>

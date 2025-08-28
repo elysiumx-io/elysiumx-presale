@@ -1,7 +1,6 @@
 import React from 'react';
 import SpotlightCard from './Components/SpotlightCard/SpotlightCard';
 import Galaxy from './Backgrounds/Galaxy/Galaxy';
-import ScrollVelocity from './TextAnimations/ScrollVelocity/ScrollVelocity';
 import styles from './ChainSelection.module.css';
 
 interface ChainSelectionProps {
@@ -19,7 +18,6 @@ const ChainSelection: React.FC<ChainSelectionProps> = ({ onSelectChain }) => {
           hueShift={240}
         />
       </div>
-      <ScrollVelocity texts={['ELYSIUMX • ELY •']} className="text-base text-white" />
       <div className={styles.contentWrapper}>
         
         <h1 className={styles.title}>
@@ -76,8 +74,6 @@ const ChainSelection: React.FC<ChainSelectionProps> = ({ onSelectChain }) => {
           </SpotlightCard>
         </div>
       </div>
-      <ScrollVelocity texts={['PRESALE •']} className="text-base text-white" />
-
     </div>
   );
 };
