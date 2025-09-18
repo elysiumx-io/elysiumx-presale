@@ -209,7 +209,7 @@ const Navbar: React.FC = () => {
             )}
           </div>
 
-          <a href="https://t.me/elysiumx_io" target='_blank' style={navLinkStyle} onClick={handleLinkClick}>
+          <a href="https://elysiumx.io" target='_blank' style={navLinkStyle} onClick={handleLinkClick}>
             <Users size={16} />
             <span>Community</span>
           </a>
@@ -290,7 +290,7 @@ const Navbar: React.FC = () => {
                 )}
               </div>
 
-              <a href="https://t.me/elysiumx_io" target='_blank' style={mobileNavLinkStyle} onClick={handleLinkClick}>
+              <a href="https://elysiumx.io" target='_blank' style={mobileNavLinkStyle} onClick={handleLinkClick}>
                 <Users size={16} />
                 <span>Community</span>
               </a>
