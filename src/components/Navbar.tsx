@@ -41,7 +41,6 @@ const Navbar: React.FC = () => {
     padding: '10px 20px',
     color: 'white',
     position: 'fixed',
-    width: '100%',
     top: 0,
     zIndex: 9999,
     borderRadius: '15px',
@@ -92,7 +91,6 @@ const Navbar: React.FC = () => {
 
   const mobileMenuOverlayStyle: React.CSSProperties = {
     position: 'fixed',
-    top: '0', // Will be adjusted dynamically
     left: 0,
     width: '100%',
     height: 'auto',
