@@ -5,14 +5,13 @@ import React, { useState, useEffect, useRef } from 'react';
 const imageUrl = new URL('/elysiumx-logo.png', import.meta.url).href;
 
 interface NavbarProps {
-  connect: () => void;
   disconnect: () => void;
   isConnected: boolean;
   address?: string;
   connectorName?: string | null;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ connect, disconnect, isConnected, address }) => {
+const Navbar: React.FC<NavbarProps> = ({ disconnect, isConnected, address }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
@@ -116,9 +115,9 @@ const Navbar: React.FC<NavbarProps> = ({ connect, disconnect, isConnected, addre
             </div>
           </div>
         ) : (
-          <button onClick={connect} className="connect-button">
-            Connect Wallet
-          </button>
+          <a href="https://nonkyc.io?ref=68cbe0d10f9fb2fb035e8fe9" target="_blank" rel="noopener noreferrer" className="connect-button">
+            Buy BTC
+          </a>
         )}
       </div>
 
@@ -189,9 +188,9 @@ const Navbar: React.FC<NavbarProps> = ({ connect, disconnect, isConnected, addre
                 </button>
               </>
             ) : (
-              <button onClick={() => { connect(); handleLinkClick(); }} className="mobile-action-button connect">
-                Connect Wallet
-              </button>
+              <a href="https://connect.nonkyc.io/" target="_blank" rel="noopener noreferrer" className="mobile-action-button connect">
+                Buy BTC
+              </a>
             )}
           </div>
         </div>

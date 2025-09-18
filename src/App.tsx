@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Web3AuthProvider } from "@web3auth/modal/react";
 import { WagmiProvider } from "@web3auth/modal/react/wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -7,10 +8,11 @@ import solanaConfig from './web3authContext.solana';
 import EvmApp from './App.evm';
 import SolanaApp from './App.solana';
 import ChainSelection from './components/ChainSelection';
+import ThankYou from './components/ThankYou';
 
 const queryClient = new QueryClient();
 
-const App: React.FC = () => {
+const Presale: React.FC = () => {
   const [chain, setChain] = useState<'evm' | 'solana' | null>(null);
 
   if (!chain) {
@@ -38,6 +40,18 @@ const App: React.FC = () => {
   }
 
   return null;
+}
+
+const App: React.FC = () => {
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Presale />} />
+        <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </HashRouter>
+  );
 };
 
 export default App;
