@@ -1,13 +1,21 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+import styles from './CoinRemitterWidget.module.css';
 
-const CoinRemitterWidget: React.FC = () => {
+const CoinRemitterWidget: React.FC<{}> = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <iframe
-      src="https://widget.coinremitter.com/presale/view/g2bq2T0wKX"
-      style={{ width: '100%', height: '800px', border: 'none' }}
-      title="Coinremitter Presale Widget"
-    ></iframe>
+    <div className={styles.widgetContainer}>
+      {isLoading && <div className={styles.loading}>Loading...</div>}
+      <iframe
+        src="https://widget.coinremitter.com/presale/view/g2bq2T0wKX"
+        className={styles.iframe}
+        style={{ display: isLoading ? 'none' : 'block' }}
+        title="Coinremitter Presale Widget"
+        onLoad={() => setIsLoading(false)}
+      ></iframe>
+    </div>
   );
 };
 

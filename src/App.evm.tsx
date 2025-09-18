@@ -1,5 +1,3 @@
-import { useWeb3AuthConnect, useWeb3AuthDisconnect } from "@web3auth/modal/react";
-import { useAccount } from "wagmi";
 import Navbar from "./components/Navbar"
 import type React from "react"
 import styles from "./App.module.css"
@@ -7,9 +5,6 @@ import Aurora from "./components/Aurora"
 import CoinRemitterWidget from "./components/CoinRemitterWidget";
 
 const App: React.FC = () => {
-  const { isConnected, connectorName } = useWeb3AuthConnect();
-  const { disconnect } = useWeb3AuthDisconnect();
-  const { address } = useAccount();
 
   return (
     <>
@@ -19,12 +14,7 @@ const App: React.FC = () => {
   amplitude={1.0}
   speed={0.5}
 />
-      <Navbar 
-        disconnect={disconnect}
-        isConnected={isConnected}
-        address={address}
-        connectorName={connectorName}
-      />
+      <Navbar />
       <div className={styles.container}>
         <CoinRemitterWidget />
       </div>
