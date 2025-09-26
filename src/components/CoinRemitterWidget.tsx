@@ -9,7 +9,7 @@ const CoinRemitterWidget: React.FC<{}> = () => {
     <div className={styles.widgetContainer}>
       {isLoading && <div className={styles.loading}>Loading...</div>}
       <iframe
-        src="https://widget.coinremitter.com/presale/view/g2bq2T0wKX"
+        src="https://pay.coinpal.io/it/cashier/goods/PTL1000078281758228604"
         className={styles.iframe}
         style={{ display: isLoading ? 'none' : 'block' }}
         title="Coinremitter Presale Widget"
